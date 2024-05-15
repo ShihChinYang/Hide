@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D57383B82BF45760005E3AE8 /* paymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57383B72BF45760005E3AE8 /* paymentViewController.swift */; };
+		D5A2DF7A2BF1C46D00700441 /* out in Resources */ = {isa = PBXBuildFile; fileRef = D5A2DF792BF1C46D00700441 /* out */; };
 		D5F26D7F2BE35FB700A42226 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F26D7E2BE35FB700A42226 /* AppDelegate.swift */; };
 		D5F26D812BE35FB700A42226 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F26D802BE35FB700A42226 /* SceneDelegate.swift */; };
 		D5F26D832BE35FB700A42226 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F26D822BE35FB700A42226 /* ViewController.swift */; };
@@ -30,7 +32,6 @@
 		D5F26DD92BE3678200A42226 /* GCDWebServerDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F26DCB2BE3678200A42226 /* GCDWebServerDataRequest.m */; };
 		D5F26DDA2BE3678200A42226 /* GCDWebServerFileRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D5F26DCC2BE3678200A42226 /* GCDWebServerFileRequest.m */; };
 		D5F26DDD2BE367C900A42226 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D5F26DDC2BE367C900A42226 /* libz.tbd */; };
-		D5F26FE82BE3715A00A42226 /* out in Resources */ = {isa = PBXBuildFile; fileRef = D5F26FE72BE3715A00A42226 /* out */; };
 		D5F26FEB2BE376F500A42226 /* confidentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F26FEA2BE376F500A42226 /* confidentials.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D57383B72BF45760005E3AE8 /* paymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paymentViewController.swift; sourceTree = "<group>"; };
+		D5A2DF792BF1C46D00700441 /* out */ = {isa = PBXFileReference; lastKnownFileType = folder; path = out; sourceTree = "<group>"; };
 		D5F26D7B2BE35FB700A42226 /* Hide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F26D7E2BE35FB700A42226 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5F26D802BE35FB700A42226 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +98,6 @@
 		D5F26DCD2BE3678200A42226 /* GCDWebServerURLEncodedFormRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDWebServerURLEncodedFormRequest.h; sourceTree = "<group>"; };
 		D5F26DDC2BE367C900A42226 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		D5F26DE02BE36CA100A42226 /* GCDWebServer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GCDWebServer-Bridging-Header.h"; sourceTree = "<group>"; };
-		D5F26FE72BE3715A00A42226 /* out */ = {isa = PBXFileReference; lastKnownFileType = folder; path = out; sourceTree = "<group>"; };
 		D5F26FEA2BE376F500A42226 /* confidentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = confidentials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -155,11 +157,12 @@
 				D5F26D7E2BE35FB700A42226 /* AppDelegate.swift */,
 				D5F26D802BE35FB700A42226 /* SceneDelegate.swift */,
 				D5F26D822BE35FB700A42226 /* ViewController.swift */,
+				D57383B72BF45760005E3AE8 /* paymentViewController.swift */,
 				D5F26D842BE35FB700A42226 /* Main.storyboard */,
 				D5F26D872BE35FB900A42226 /* Assets.xcassets */,
 				D5F26D892BE35FB900A42226 /* LaunchScreen.storyboard */,
 				D5F26D8C2BE35FB900A42226 /* Info.plist */,
-				D5F26FE72BE3715A00A42226 /* out */,
+				D5A2DF792BF1C46D00700441 /* out */,
 			);
 			path = Hide;
 			sourceTree = "<group>";
@@ -363,7 +366,7 @@
 				D5F26D8B2BE35FB900A42226 /* LaunchScreen.storyboard in Resources */,
 				D5F26D882BE35FB900A42226 /* Assets.xcassets in Resources */,
 				D5F26D862BE35FB700A42226 /* Main.storyboard in Resources */,
-				D5F26FE82BE3715A00A42226 /* out in Resources */,
+				D5A2DF7A2BF1C46D00700441 /* out in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +394,7 @@
 				D5F26DDA2BE3678200A42226 /* GCDWebServerFileRequest.m in Sources */,
 				D5F26DD62BE3678200A42226 /* GCDWebServerStreamedResponse.m in Sources */,
 				D5F26DD82BE3678200A42226 /* GCDWebServerMultiPartFormRequest.m in Sources */,
+				D57383B82BF45760005E3AE8 /* paymentViewController.swift in Sources */,
 				D5F26DD92BE3678200A42226 /* GCDWebServerDataRequest.m in Sources */,
 				D5F26DD52BE3678200A42226 /* GCDWebServerDataResponse.m in Sources */,
 				D5F26DD12BE3678200A42226 /* GCDWebServer.m in Sources */,
@@ -586,6 +590,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				"HEADER_SEARCH_PATHS[arch=*]" = "GCDWebServer/**";
 				INFOPLIST_FILE = Hide/Info.plist;
@@ -615,6 +620,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				"HEADER_SEARCH_PATHS[arch=*]" = "GCDWebServer/**";
 				INFOPLIST_FILE = Hide/Info.plist;

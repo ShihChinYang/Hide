@@ -39,7 +39,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let url = URL(string: "http://localhost:8080")!
+        let url = URL(string: "http://localhost:8080/apps/colors.html")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
     }
@@ -48,6 +48,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         guard let dict = message.body as? [String : AnyObject] else {
             return
         }
+    
         appLoaded = true
         print(dict)
         let localhostAccessKeyId = AccessKeyInfo.localhostAccessKeyId
@@ -87,6 +88,31 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
                 completionHandler(false)
             }))
         self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
+        if navigationAction.navigationType == .linkActivated  {
+            if let url = navigationAction.request.url, let host = url.host {
+                print(url)
+                print(host)
+                if host.hasPrefix("support.bsafes.com"), UIApplication.shared.canOpenURL(url) {
+                    //UIApplication.shared.open(url)
+                    /*let alertController = UIAlertController(title: nil, message: "Hello!", preferredStyle: .actionSheet)
+                    self.present(alertController, animated: true, completion: nil)*/
+                    let paymentViewController = paymentViewController()
+                    self.present(paymentViewController, animated: true)
+                    decisionHandler(.cancel)
+                    return
+                } else {
+                    decisionHandler(.allow)
+                    return
+                }
+            }
+        } else {
+            print("not a user link")
+            decisionHandler(.allow)
+            return
+        }
     }
 }
 
