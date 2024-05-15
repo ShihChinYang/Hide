@@ -6,17 +6,36 @@
 //
 
 import UIKit
+import SwiftUI
 
 class paymentViewController: UIViewController {
+    var planId: String = "None"
+    weak var delegete: ViewController!
+    
     private let backButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initialSetup()
+        //initialSetup()
+        addPaymentContentView()
+    }
+    
+    fileprivate func addPaymentContentView() {
+        let paymentContentView = paymentContentView(delegate:self, model: PaymentModel(text:planId))
+        let paymentContenViewController = UIHostingController(rootView: paymentContentView)
+        addChild(paymentContenViewController)
+        view.addSubview(paymentContenViewController.view)
+        paymentContenViewController.didMove(toParent: self)
+        paymentContenViewController.view.translatesAutoresizingMaskIntoConstraints = false
+        paymentContenViewController.view.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        paymentContenViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        paymentContenViewController.view.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        paymentContenViewController.view.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
     }
     
     private func initialSetup() {
         // basic setup
+        print(planId)
         view.backgroundColor = .white
         navigationItem.title = "Payment"
         
@@ -36,7 +55,13 @@ class paymentViewController: UIViewController {
         backButton.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
     }
     
+    func handlePaymentDone() {
+        delegete.updatePurhcaseResult(result: planId)
+        self.dismiss(animated: true)
+    }
+    
     @objc private func handleBackButtonTapped() {
+        delegete.updatePurhcaseResult(result: planId)
         self.dismiss(animated: true)
     }
 }

@@ -100,6 +100,8 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
                     /*let alertController = UIAlertController(title: nil, message: "Hello!", preferredStyle: .actionSheet)
                     self.present(alertController, animated: true, completion: nil)*/
                     let paymentViewController = paymentViewController()
+                    paymentViewController.planId = "50GB"
+                    paymentViewController.delegete = self
                     self.present(paymentViewController, animated: true)
                     decisionHandler(.cancel)
                     return
@@ -113,6 +115,10 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
             decisionHandler(.allow)
             return
         }
+    }
+    
+    func updatePurhcaseResult(result: String) {
+        print(result);
     }
 }
 

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		D57383B82BF45760005E3AE8 /* paymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57383B72BF45760005E3AE8 /* paymentViewController.swift */; };
 		D5A2DF7A2BF1C46D00700441 /* out in Resources */ = {isa = PBXBuildFile; fileRef = D5A2DF792BF1C46D00700441 /* out */; };
+		D5C05D342BF49F99003D77B4 /* paymentContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C05D332BF49F99003D77B4 /* paymentContentView.swift */; };
+		D5C05D362BF4AFEB003D77B4 /* paymentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5C05D352BF4AFEB003D77B4 /* paymentModel.swift */; };
 		D5F26D7F2BE35FB700A42226 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F26D7E2BE35FB700A42226 /* AppDelegate.swift */; };
 		D5F26D812BE35FB700A42226 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F26D802BE35FB700A42226 /* SceneDelegate.swift */; };
 		D5F26D832BE35FB700A42226 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F26D822BE35FB700A42226 /* ViewController.swift */; };
@@ -55,6 +57,8 @@
 /* Begin PBXFileReference section */
 		D57383B72BF45760005E3AE8 /* paymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paymentViewController.swift; sourceTree = "<group>"; };
 		D5A2DF792BF1C46D00700441 /* out */ = {isa = PBXFileReference; lastKnownFileType = folder; path = out; sourceTree = "<group>"; };
+		D5C05D332BF49F99003D77B4 /* paymentContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paymentContentView.swift; sourceTree = "<group>"; };
+		D5C05D352BF4AFEB003D77B4 /* paymentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paymentModel.swift; sourceTree = "<group>"; };
 		D5F26D7B2BE35FB700A42226 /* Hide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F26D7E2BE35FB700A42226 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5F26D802BE35FB700A42226 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 				D5F26D802BE35FB700A42226 /* SceneDelegate.swift */,
 				D5F26D822BE35FB700A42226 /* ViewController.swift */,
 				D57383B72BF45760005E3AE8 /* paymentViewController.swift */,
+				D5C05D352BF4AFEB003D77B4 /* paymentModel.swift */,
+				D5C05D332BF49F99003D77B4 /* paymentContentView.swift */,
 				D5F26D842BE35FB700A42226 /* Main.storyboard */,
 				D5F26D872BE35FB900A42226 /* Assets.xcassets */,
 				D5F26D892BE35FB900A42226 /* LaunchScreen.storyboard */,
@@ -395,10 +401,12 @@
 				D5F26DD62BE3678200A42226 /* GCDWebServerStreamedResponse.m in Sources */,
 				D5F26DD82BE3678200A42226 /* GCDWebServerMultiPartFormRequest.m in Sources */,
 				D57383B82BF45760005E3AE8 /* paymentViewController.swift in Sources */,
+				D5C05D362BF4AFEB003D77B4 /* paymentModel.swift in Sources */,
 				D5F26DD92BE3678200A42226 /* GCDWebServerDataRequest.m in Sources */,
 				D5F26DD52BE3678200A42226 /* GCDWebServerDataResponse.m in Sources */,
 				D5F26DD12BE3678200A42226 /* GCDWebServer.m in Sources */,
 				D5F26FEB2BE376F500A42226 /* confidentials.swift in Sources */,
+				D5C05D342BF49F99003D77B4 /* paymentContentView.swift in Sources */,
 				D5F26DD72BE3678200A42226 /* GCDWebServerURLEncodedFormRequest.m in Sources */,
 				D5F26D832BE35FB700A42226 /* ViewController.swift in Sources */,
 				D5F26D7F2BE35FB700A42226 /* AppDelegate.swift in Sources */,
