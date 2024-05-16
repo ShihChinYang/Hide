@@ -29,7 +29,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         webView = WKWebView(frame: .zero, configuration: webViewConfiguration)
         webView.navigationDelegate = self
         webView.uiDelegate = self
-        webView.isInspectable = true
+        //webView.isInspectable = true
         let contentController = webView.configuration.userContentController
         contentController.add(self, name: "toggleMessageHandler")
         view = webView

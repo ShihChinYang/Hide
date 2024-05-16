@@ -1,0 +1,95 @@
+{
+  "identifier" : "264EA0B0",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "0.99",
+      "familyShareable" : false,
+      "internalID" : "F2964F4C",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "Draw Anything",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "draw",
+      "referenceName" : "Draw",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "3.50",
+      "familyShareable" : false,
+      "internalID" : "C17E797A",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "One Month",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "oneMonth",
+      "referenceName" : "OneMonth",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

@@ -7,8 +7,8 @@
 
 import Combine
 
-class PaymentModel: ObservableObject {
-    @Published var text: String
+class PaymentModel: Any {
+    var text: String
     
     init(text: String) {
         self.text = text
