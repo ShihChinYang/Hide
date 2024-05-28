@@ -14,13 +14,20 @@ class Store: ObservableObject {
     @Published var purchasedNonConsumables = Set<Product>()
     @Published var purchasedConsumables = [Product]()
     
-    init() {
-        transactionListener = listenForTransaction()
+    init(planId: String) {
+        transactionListener = listenForTransactions()
         Task {
             await requestProducts()
             await updateCurrentEntitlements()
         }
     }
+    
+    func getProducts() {
+        Task {
+            await requestProducts()
+        }
+    }
+    
     @MainActor
     func requestProducts() async {
         do {
@@ -44,7 +51,10 @@ class Store: ObservableObject {
     
     @MainActor
     func purchase(_ product: Product) async throws {
-        let result = try await product.purchase()
+        let uuid = UUID();
+        let token = Product.PurchaseOption.appAccountToken(uuid);
+        let result = try await product.purchase(options: [])
+        
         switch result {
         case .success(let transactionVerification):
             await self.handle(transactionVerification: transactionVerification)
@@ -65,13 +75,18 @@ class Store: ObservableObject {
                 return
             }
             self.addPurchased(product)
+            print(transaction.appBundleID)
+            print(transaction.purchasedQuantity)
+            let data = transaction.jsonRepresentation
+            print(transaction.jsonRepresentation)
             await transaction.finish()
+            return
         default:
             return
         }
     }
     
-    func listenForTransaction() -> Task <Void, Error> {
+    func listenForTransactions() -> Task <Void, Error> {
         return Task.detached {
             for await result in Transaction.updates {
                 await self.handle(transactionVerification: result)

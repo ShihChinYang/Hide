@@ -29,7 +29,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         webView = WKWebView(frame: .zero, configuration: webViewConfiguration)
         webView.navigationDelegate = self
         webView.uiDelegate = self
-        //webView.isInspectable = true
+        webView.isInspectable = true
         let contentController = webView.configuration.userContentController
         contentController.add(self, name: "toggleMessageHandler")
         view = webView
@@ -90,19 +90,30 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         self.present(alertController, animated: true, completion: nil)
     }
     
+    private func checkout(_ productId: String) {
+        //let paymentViewController = paymentViewController()
+        //paymentViewController.planId = query
+        //paymentViewController.delegete = self
+        //self.present(paymentViewController, animated: true)
+        let checkout = Checkout(forController: self, forProduct: productId)
+        print("productId \(checkout.productIDs)")
+        checkout.getProducts()
+    }
+    
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if navigationAction.navigationType == .linkActivated  {
             if let url = navigationAction.request.url, let host = url.host {
+                let path = url.path
                 print(url)
                 print(host)
-                if host.hasPrefix("support.bsafes.com"), UIApplication.shared.canOpenURL(url) {
+                print(path)
+                if path == "/services/checkout", UIApplication.shared.canOpenURL(url) {
                     //UIApplication.shared.open(url)
                     /*let alertController = UIAlertController(title: nil, message: "Hello!", preferredStyle: .actionSheet)
                     self.present(alertController, animated: true, completion: nil)*/
-                    let paymentViewController = paymentViewController()
-                    paymentViewController.planId = "50GB"
-                    paymentViewController.delegete = self
-                    self.present(paymentViewController, animated: true)
+                    if let productId = url.query {
+                        checkout(productId)
+                    }
                     decisionHandler(.cancel)
                     return
                 } else {

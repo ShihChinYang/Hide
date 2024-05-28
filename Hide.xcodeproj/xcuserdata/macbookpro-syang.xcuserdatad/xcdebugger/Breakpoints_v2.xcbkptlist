@@ -3,4 +3,336 @@
    uuid = "B00EBF7A-DC58-43B8-AE47-91D125E79695"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "09545343-A898-417F-A8D1-803D8FD73C9F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hide/store.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "handle(transactionVerification:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "09545343-A898-417F-A8D1-803D8FD73C9F - 275bed0e9df95f9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Hide.Store.listenForTransactions() -&gt; Swift.Task&lt;(), Swift.Error&gt;"
+                  moduleName = "Hide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro-syang/WuNanTech/iOS/Hide/Hide/store.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "86">
+               </Location>
+               <Location
+                  uuid = "09545343-A898-417F-A8D1-803D8FD73C9F - 132812451f0e5da"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable () async -&gt; () in Hide.Store.listenForTransactions() -&gt; Swift.Task&lt;(), Swift.Error&gt;"
+                  moduleName = "Hide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro-syang/WuNanTech/iOS/Hide/Hide/store.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "237">
+               </Location>
+               <Location
+                  uuid = "09545343-A898-417F-A8D1-803D8FD73C9F - 4f8053e9e28997c4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Hide.Store.listenForTransactions() -&gt; Swift.Task&lt;(), Swift.Error&gt;"
+                  moduleName = "Hide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro-syang/WuNanTech/iOS/Hide/Hide/store.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "09545343-A898-417F-A8D1-803D8FD73C9F - 54ab3a3a59692967"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Hide.Store.handle(transactionVerification: StoreKit.VerificationResult&lt;StoreKit.Transaction&gt;) async -&gt; ()"
+                  moduleName = "Hide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro-syang/WuNanTech/iOS/Hide/Hide/store.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "178">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E7DFC95C-4FF9-4A44-B38F-78674EB69B90"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hide/store.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "listenForTransactions()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E7DFC95C-4FF9-4A44-B38F-78674EB69B90 - 7c8d74b400a73db0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for Hide.Store.updateCurrentEntitlements() async -&gt; ()"
+                  moduleName = "Hide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro-syang/WuNanTech/iOS/Hide/Hide/store.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "142">
+               </Location>
+               <Location
+                  uuid = "E7DFC95C-4FF9-4A44-B38F-78674EB69B90 - 2b4a55f1497f4785"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) await resume partial function for Hide.Store.updateCurrentEntitlements() async -&gt; ()"
+                  moduleName = "Hide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro-syang/WuNanTech/iOS/Hide/Hide/store.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  uuid = "E7DFC95C-4FF9-4A44-B38F-78674EB69B90 - 482b1cc88ece6db6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for Hide.Store.updateCurrentEntitlements() async -&gt; ()"
+                  moduleName = "Hide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro-syang/WuNanTech/iOS/Hide/Hide/store.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "E7DFC95C-4FF9-4A44-B38F-78674EB69B90 - a81cbdb70870d0f3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Hide.Store.listenForTransactions() -&gt; Swift.Task&lt;(), Swift.Error&gt;"
+                  moduleName = "Hide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro-syang/WuNanTech/iOS/Hide/Hide/store.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "264">
+               </Location>
+               <Location
+                  uuid = "E7DFC95C-4FF9-4A44-B38F-78674EB69B90 - 77ab57b1266cbeec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) await resume partial function for closure #1 @Sendable () async -&gt; () in Hide.Store.listenForTransactions() -&gt; Swift.Task&lt;(), Swift.Error&gt;"
+                  moduleName = "Hide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro-syang/WuNanTech/iOS/Hide/Hide/store.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "34">
+               </Location>
+               <Location
+                  uuid = "E7DFC95C-4FF9-4A44-B38F-78674EB69B90 - 84a8e77d165b1cf1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for closure #1 @Sendable () async -&gt; () in Hide.Store.listenForTransactions() -&gt; Swift.Task&lt;(), Swift.Error&gt;"
+                  moduleName = "Hide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro-syang/WuNanTech/iOS/Hide/Hide/store.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "92"
+                  endingLineNumber = "92"
+                  offsetFromSymbolStart = "40">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F1A7707-FA37-482A-AC06-DC1DC607A936"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hide/store.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "init(planId:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B756FCFA-F91F-4B84-AEF7-65268FDEB7EA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hide/checkout.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "requestProducts()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B756FCFA-F91F-4B84-AEF7-65268FDEB7EA - 21a0359344d4c216"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for Hide.Checkout.requestProducts() async -&gt; ()"
+                  moduleName = "Hide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro-syang/WuNanTech/iOS/Hide/Hide/checkout.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "305">
+               </Location>
+               <Location
+                  uuid = "B756FCFA-F91F-4B84-AEF7-65268FDEB7EA - 74e9670861657115"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for Hide.Checkout.requestProducts() async -&gt; ()"
+                  moduleName = "Hide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro-syang/WuNanTech/iOS/Hide/Hide/checkout.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "101">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98A37B14-FEB7-416C-AD63-479E8E62074A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hide/checkout.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "purchase(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "86CFDF18-9479-440D-8806-176ABBB8D97C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hide/checkout.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "44"
+            endingLineNumber = "44"
+            landmarkName = "purchase(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D077F37B-3921-4C48-A136-0A5EF8AB122C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Hide/checkout.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "handle(transactionVerification:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D077F37B-3921-4C48-A136-0A5EF8AB122C - fc1aa4449f4e9fcb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Hide.Checkout.handle(transactionVerification: StoreKit.VerificationResult&lt;StoreKit.Transaction&gt;) async -&gt; ()"
+                  moduleName = "Hide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro-syang/WuNanTech/iOS/Hide/Hide/checkout.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "167">
+               </Location>
+               <Location
+                  uuid = "D077F37B-3921-4C48-A136-0A5EF8AB122C - fc1aa4449f4e9fcb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for Hide.Checkout.handle(transactionVerification: StoreKit.VerificationResult&lt;StoreKit.Transaction&gt;) async -&gt; ()"
+                  moduleName = "Hide"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/macbookpro-syang/WuNanTech/iOS/Hide/Hide/checkout.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "248">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
