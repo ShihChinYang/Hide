@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import StoreKit
 
 class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKScriptMessageHandler{
     
@@ -29,7 +30,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         webView = WKWebView(frame: .zero, configuration: webViewConfiguration)
         webView.navigationDelegate = self
         webView.uiDelegate = self
-        webView.isInspectable = true
+        //webView.isInspectable = true
         let contentController = webView.configuration.userContentController
         contentController.add(self, name: "toggleMessageHandler")
         view = webView
@@ -91,13 +92,14 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
     }
     
     private func checkout(_ productId: String) {
-        //let paymentViewController = paymentViewController()
-        //paymentViewController.planId = query
-        //paymentViewController.delegete = self
-        //self.present(paymentViewController, animated: true)
-        let checkout = Checkout(forController: self, forProduct: productId)
-        print("productId \(checkout.productIDs)")
-        checkout.getProducts()
+        let checkout = Checkout(forDelegate: self, forProduct: productId)
+        checkout.purchase()
+    }
+    
+    func handleCheckoutResult(_ transaction: Transaction?) {
+        if let transaction {
+            print(transaction)
+        }
     }
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
@@ -126,10 +128,6 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
             decisionHandler(.allow)
             return
         }
-    }
-    
-    func updatePurhcaseResult(result: String) {
-        print(result);
     }
 }
 

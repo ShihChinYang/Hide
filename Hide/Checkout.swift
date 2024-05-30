@@ -11,25 +11,26 @@ class Checkout {
     let delegate: ViewController
     var products = [Product]()
     var productIDs = [String]()
+    var transactionListener: Task<Void, Error>?
     
-    init(forController viewController: ViewController, forProduct id: String) {
+    init(forDelegate viewController: ViewController, forProduct id: String) {
         delegate = viewController
         productIDs.append(id)
+        transactionListener = listenForTransactions()
     }
     
-    func getProducts() {
+    func purchase() {
         Task {
-            await requestProducts()
+            await requestForProduct()
         }
     }
     
     @MainActor
-    func requestProducts() async {
+    func requestForProduct() async {
         do {
             products = try await Product.products(for: productIDs)
             let product = products[0]
             try await purchase(product)
-            print(products)
         } catch {
             print(error)
         }
@@ -37,35 +38,43 @@ class Checkout {
     
     @MainActor
     func purchase(_ product: Product) async throws {
-        let uuid = UUID();
-        let token = Product.PurchaseOption.appAccountToken(uuid);
         let result = try await product.purchase(options: [])
-        
         switch result {
         case .success(let transactionVerification):
-            await self.handle(transactionVerification: transactionVerification)
+            _ = await self.handle(transactionVerification: transactionVerification)
+            return
+        case .pending:
+            return
         default:
+            delegate.handleCheckoutResult(nil)
             return
         }
     }
     
     @MainActor
-    private func handle(transactionVerification result: VerificationResult <Transaction>) async {
+    private func handle(transactionVerification result: VerificationResult <Transaction>) async -> Transaction? {
         switch result {
         case let .verified(transaction):
             guard
-                let product = self.products.first(where: {
+                self.products.first(where: {
                     $0.id == transaction.productID
-                })
+                }) != nil
             else {
-                return
+                return nil
             }
-            print(transaction.appBundleID)
-            print(transaction.purchasedQuantity)
+            delegate.handleCheckoutResult(transaction)
             await transaction.finish()
-            return
+            return transaction
         default:
-            return
+            return nil
+        }
+    }
+    
+    func listenForTransactions() -> Task <Void, Error> {
+        return Task.detached {
+            for await result in Transaction.updates {
+                _ = await self.handle(transactionVerification: result)
+            }
         }
     }
 }

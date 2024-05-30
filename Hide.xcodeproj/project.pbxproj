@@ -7,13 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D54831DF2C047257007CA715 /* out in Resources */ = {isa = PBXBuildFile; fileRef = D54831DE2C047257007CA715 /* out */; };
-		D59C032B2C0558EE00CC19C4 /* checkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59C032A2C0558EE00CC19C4 /* checkout.swift */; };
+		D59C032B2C0558EE00CC19C4 /* Checkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59C032A2C0558EE00CC19C4 /* Checkout.swift */; };
 		D5B454522BF59D670044D576 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B454512BF59D670044D576 /* StoreKit.framework */; };
-		D5B454562BF5A2460044D576 /* store.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B454552BF5A2460044D576 /* store.swift */; };
-		D5B4545A2BF5A9FD0044D576 /* productView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B454592BF5A9FD0044D576 /* productView.swift */; };
-		D5B4545C2BF5AA5A0044D576 /* supportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B4545B2BF5AA5A0044D576 /* supportView.swift */; };
-		D5B4545E2BF5D9D20044D576 /* persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5B4545D2BF5D9D20044D576 /* persistence.swift */; };
+		D5DF6C1F2C082F38006AE7C1 /* out in Resources */ = {isa = PBXBuildFile; fileRef = D5DF6C1E2C082F38006AE7C1 /* out */; };
 		D5F26D7F2BE35FB700A42226 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F26D7E2BE35FB700A42226 /* AppDelegate.swift */; };
 		D5F26D812BE35FB700A42226 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F26D802BE35FB700A42226 /* SceneDelegate.swift */; };
 		D5F26D832BE35FB700A42226 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F26D822BE35FB700A42226 /* ViewController.swift */; };
@@ -58,15 +54,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D54831DE2C047257007CA715 /* out */ = {isa = PBXFileReference; lastKnownFileType = folder; path = out; sourceTree = "<group>"; };
-		D59C032A2C0558EE00CC19C4 /* checkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checkout.swift; sourceTree = "<group>"; };
+		D59C032A2C0558EE00CC19C4 /* Checkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkout.swift; sourceTree = "<group>"; };
 		D59C032C2C056FF900CC19C4 /* BSafesStore.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = BSafesStore.storekit; sourceTree = "<group>"; };
 		D5B454512BF59D670044D576 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		D5B454552BF5A2460044D576 /* store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = store.swift; sourceTree = "<group>"; };
-		D5B454592BF5A9FD0044D576 /* productView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productView.swift; sourceTree = "<group>"; };
-		D5B4545B2BF5AA5A0044D576 /* supportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = supportView.swift; sourceTree = "<group>"; };
-		D5B4545D2BF5D9D20044D576 /* persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = persistence.swift; sourceTree = "<group>"; };
-		D5F232592BF72C3F00196DC9 /* Services.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Services.storekit; sourceTree = "<group>"; };
+		D5DF6C1E2C082F38006AE7C1 /* out */ = {isa = PBXFileReference; lastKnownFileType = folder; path = out; sourceTree = "<group>"; };
 		D5F26D7B2BE35FB700A42226 /* Hide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F26D7E2BE35FB700A42226 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D5F26D802BE35FB700A42226 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -169,19 +160,14 @@
 			children = (
 				D5F26D7E2BE35FB700A42226 /* AppDelegate.swift */,
 				D5F26D802BE35FB700A42226 /* SceneDelegate.swift */,
-				D5F232592BF72C3F00196DC9 /* Services.storekit */,
-				D5B454552BF5A2460044D576 /* store.swift */,
-				D59C032A2C0558EE00CC19C4 /* checkout.swift */,
+				D59C032A2C0558EE00CC19C4 /* Checkout.swift */,
 				D59C032C2C056FF900CC19C4 /* BSafesStore.storekit */,
-				D5B4545D2BF5D9D20044D576 /* persistence.swift */,
-				D5B454592BF5A9FD0044D576 /* productView.swift */,
-				D5B4545B2BF5AA5A0044D576 /* supportView.swift */,
 				D5F26D822BE35FB700A42226 /* ViewController.swift */,
 				D5F26D842BE35FB700A42226 /* Main.storyboard */,
 				D5F26D872BE35FB900A42226 /* Assets.xcassets */,
 				D5F26D892BE35FB900A42226 /* LaunchScreen.storyboard */,
 				D5F26D8C2BE35FB900A42226 /* Info.plist */,
-				D54831DE2C047257007CA715 /* out */,
+				D5DF6C1E2C082F38006AE7C1 /* out */,
 			);
 			path = Hide;
 			sourceTree = "<group>";
@@ -386,7 +372,7 @@
 				D5F26D8B2BE35FB900A42226 /* LaunchScreen.storyboard in Resources */,
 				D5F26D882BE35FB900A42226 /* Assets.xcassets in Resources */,
 				D5F26D862BE35FB700A42226 /* Main.storyboard in Resources */,
-				D54831DF2C047257007CA715 /* out in Resources */,
+				D5DF6C1F2C082F38006AE7C1 /* out in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,11 +398,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5F26DDA2BE3678200A42226 /* GCDWebServerFileRequest.m in Sources */,
-				D5B4545E2BF5D9D20044D576 /* persistence.swift in Sources */,
 				D5F26DD62BE3678200A42226 /* GCDWebServerStreamedResponse.m in Sources */,
 				D5F26DD82BE3678200A42226 /* GCDWebServerMultiPartFormRequest.m in Sources */,
-				D5B454562BF5A2460044D576 /* store.swift in Sources */,
-				D5B4545A2BF5A9FD0044D576 /* productView.swift in Sources */,
 				D5F26DD92BE3678200A42226 /* GCDWebServerDataRequest.m in Sources */,
 				D5F26DD52BE3678200A42226 /* GCDWebServerDataResponse.m in Sources */,
 				D5F26DD12BE3678200A42226 /* GCDWebServer.m in Sources */,
@@ -429,8 +412,7 @@
 				D5F26DCE2BE3678200A42226 /* GCDWebServerResponse.m in Sources */,
 				D5F26DD32BE3678200A42226 /* GCDWebServerErrorResponse.m in Sources */,
 				D5F26DD22BE3678200A42226 /* GCDWebServerConnection.m in Sources */,
-				D5B4545C2BF5AA5A0044D576 /* supportView.swift in Sources */,
-				D59C032B2C0558EE00CC19C4 /* checkout.swift in Sources */,
+				D59C032B2C0558EE00CC19C4 /* Checkout.swift in Sources */,
 				D5F26DCF2BE3678200A42226 /* GCDWebServerRequest.m in Sources */,
 				D5F26DD42BE3678200A42226 /* GCDWebServerFileResponse.m in Sources */,
 			);
@@ -623,7 +605,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -654,7 +636,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
