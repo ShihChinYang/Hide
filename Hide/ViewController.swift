@@ -55,7 +55,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         let localhostAccessKeyId = AccessKeyInfo.localhostAccessKeyId
         let localhostAccessKey = AccessKeyInfo.localhostAccessKey
         
-        let script = "window.bsafesNative.bsafesNativeToWebCall({localhostAccessKeyId:\"\(localhostAccessKeyId)\", localhostAccessKey:\"\(localhostAccessKey)\"});"
+        let script = "window.bsafesNative.accessKeyWebCall({localhostAccessKeyId:\"\(localhostAccessKeyId)\", localhostAccessKey:\"\(localhostAccessKey)\"});"
 
         webView.evaluateJavaScript(script) { (result, error) in
             if let result = result {
@@ -99,6 +99,15 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
     func handleCheckoutResult(_ transaction: Transaction?) {
         if let transaction {
             print(transaction)
+            let script = "window.bsafesNative.transactionWebCall({id:\"\(transaction.id)\", originalId:\"\(transaction.originalID)\"});"
+
+            webView.evaluateJavaScript(script) { (result, error) in
+                if let result = result {
+                    print("Label is updated with message: \(result)")
+                } else if let error = error {
+                    print("An error occurred: \(error)")
+                }
+            }
         }
     }
     
