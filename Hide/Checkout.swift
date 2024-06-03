@@ -45,8 +45,10 @@ class Checkout {
             return
         case .pending:
             return
+        case .userCancelled:
+            delegate.handleCheckoutError("Cancelled")
+            return
         default:
-            delegate.handleCheckoutResult(nil)
             return
         }
     }
@@ -66,6 +68,7 @@ class Checkout {
             await transaction.finish()
             return transaction
         default:
+            delegate.handleCheckoutError("Invalid transaction")
             return nil
         }
     }

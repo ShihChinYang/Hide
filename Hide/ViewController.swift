@@ -30,7 +30,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         webView = WKWebView(frame: .zero, configuration: webViewConfiguration)
         webView.navigationDelegate = self
         webView.uiDelegate = self
-        //webView.isInspectable = true
+        webView.isInspectable = true
         let contentController = webView.configuration.userContentController
         contentController.add(self, name: "toggleMessageHandler")
         view = webView
@@ -40,7 +40,8 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let url = URL(string: "http://localhost:8080/apps/colors.html")!
+        //let url = URL(string: "http://localhost:8080/apps/colors.html")!
+        let url = URL(string: "http://localhost:3000/apps/colors")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
     }
@@ -97,16 +98,30 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
     }
     
     func handleCheckoutResult(_ transaction: Transaction?) {
+        var script: String
         if let transaction {
             print(transaction)
-            let script = "window.bsafesNative.transactionWebCall({id:\"\(transaction.id)\", originalId:\"\(transaction.originalID)\"});"
+            script = "window.bsafesNative.transactionWebCall({status: \"ok\", id:\"\(transaction.id)\", originalId:\"\(transaction.originalID)\"});"
 
-            webView.evaluateJavaScript(script) { (result, error) in
-                if let result = result {
-                    print("Label is updated with message: \(result)")
-                } else if let error = error {
-                    print("An error occurred: \(error)")
-                }
+        } else {
+            script = "window.bsafesNative.transactionWebCall({status: \"error\"})"
+        }
+        webView.evaluateJavaScript(script) { (result, error) in
+            if let result = result {
+                print("Label is updated with message: \(result)")
+            } else if let error = error {
+                print("An error occurred: \(error)")
+            }
+        }
+    }
+    
+    func handleCheckoutError(_ result: String) {
+        var script = "window.bsafesNative.transactionWebCall({status: \"error\", error: \"\(result)\"})"
+        webView.evaluateJavaScript(script) { (result, error) in
+            if let result = result {
+                print("Label is updated with message: \(result)")
+            } else if let error = error {
+                print("An error occurred: \(error)")
             }
         }
     }
