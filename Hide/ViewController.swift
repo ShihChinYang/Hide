@@ -101,7 +101,9 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         var script: String
         if let transaction {
             print(transaction)
-            script = "window.bsafesNative.transactionWebCall({status: \"ok\", id:\"\(transaction.id)\", originalId:\"\(transaction.originalID)\"});"
+            let purchaseTime = Int(transaction.purchaseDate.timeIntervalSince1970 * 1000);
+            print(purchaseTime);
+            script = "window.bsafesNative.transactionWebCall({status: \"ok\", transaction: { time: \(purchaseTime), id:\"\(transaction.id)\", originalId:\"\(transaction.originalID)\"}});"
 
         } else {
             script = "window.bsafesNative.transactionWebCall({status: \"error\"})"
