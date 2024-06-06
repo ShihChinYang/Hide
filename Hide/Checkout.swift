@@ -9,13 +9,15 @@ import StoreKit
 
 class Checkout {
     let delegate: ViewController
+    let clientSecret: String
     var products = [Product]()
     var productIDs = [String]()
     var transactionListener: Task<Void, Error>?
     
-    init(forDelegate viewController: ViewController, forProduct id: String) {
+    init(forDelegate viewController: ViewController, forProduct id: String, withSecret secret: String) {
         delegate = viewController
         productIDs.append(id)
+        clientSecret = secret
         transactionListener = listenForTransactions()
     }
     
