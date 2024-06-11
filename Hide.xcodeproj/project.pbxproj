@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D55DA6AB2C10464000277844 /* out in Resources */ = {isa = PBXBuildFile; fileRef = D55DA6AA2C10464000277844 /* out */; };
+		D52BE9E42C17EA1D0089F966 /* out in Resources */ = {isa = PBXBuildFile; fileRef = D52BE9E32C17EA1D0089F966 /* out */; };
 		D59C032B2C0558EE00CC19C4 /* Checkout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D59C032A2C0558EE00CC19C4 /* Checkout.swift */; };
 		D5B454522BF59D670044D576 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B454512BF59D670044D576 /* StoreKit.framework */; };
 		D5F26D7F2BE35FB700A42226 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5F26D7E2BE35FB700A42226 /* AppDelegate.swift */; };
@@ -54,7 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D55DA6AA2C10464000277844 /* out */ = {isa = PBXFileReference; lastKnownFileType = folder; path = out; sourceTree = "<group>"; };
+		D52BE9E32C17EA1D0089F966 /* out */ = {isa = PBXFileReference; lastKnownFileType = folder; path = out; sourceTree = "<group>"; };
 		D59C032A2C0558EE00CC19C4 /* Checkout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkout.swift; sourceTree = "<group>"; };
 		D59C032C2C056FF900CC19C4 /* BSafesStore.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = BSafesStore.storekit; sourceTree = "<group>"; };
 		D5B454512BF59D670044D576 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
@@ -167,7 +167,7 @@
 				D5F26D872BE35FB900A42226 /* Assets.xcassets */,
 				D5F26D892BE35FB900A42226 /* LaunchScreen.storyboard */,
 				D5F26D8C2BE35FB900A42226 /* Info.plist */,
-				D55DA6AA2C10464000277844 /* out */,
+				D52BE9E32C17EA1D0089F966 /* out */,
 			);
 			path = Hide;
 			sourceTree = "<group>";
@@ -372,7 +372,7 @@
 				D5F26D8B2BE35FB900A42226 /* LaunchScreen.storyboard in Resources */,
 				D5F26D882BE35FB900A42226 /* Assets.xcassets in Resources */,
 				D5F26D862BE35FB700A42226 /* Main.storyboard in Resources */,
-				D55DA6AB2C10464000277844 /* out in Resources */,
+				D52BE9E42C17EA1D0089F966 /* out in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,7 +605,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -636,7 +636,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
