@@ -14,6 +14,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
     var webView: WKWebView!
     var timer: Timer!
     var appLoaded: Bool = false
+    var pendingTransaction: Transaction? = nil
     
     @objc func fireTimer() {
         print("Timer fired!")
@@ -77,6 +78,11 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
                 }
                 print(appleClientSecret)
                 checkout(planId, withSecret: appleClientSecret)
+            case "finishTransaction":
+                print("finishTransaction")
+                Task {
+                    await finishTransaction()
+                }
             default:
                 print(action)
             }
@@ -117,6 +123,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         var script: String
         if let transaction {
             print(transaction)
+            pendingTransaction = transaction
             let purchaseTime = Int(transaction.purchaseDate.timeIntervalSince1970 * 1000);
             print(purchaseTime);
             script = "window.bsafesNative.transactionWebCall({status: \"ok\", transaction: { time: \(purchaseTime), id:\"\(transaction.id)\", originalId:\"\(transaction.originalID)\"}});"
@@ -141,6 +148,14 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
             } else if let error = error {
                 print("An error occurred: \(error)")
             }
+        }
+    }
+    
+    @MainActor
+    private func finishTransaction() async {
+        if let pendingTransaction {
+            await pendingTransaction.finish()
+            print("Transaction finished.")
         }
     }
     

@@ -40,6 +40,7 @@ class Checkout {
     
     @MainActor
     func purchase(_ product: Product) async throws {
+        print("purchase \(product)")
         let result = try await product.purchase(options: [])
         switch result {
         case .success(let transactionVerification):
@@ -67,7 +68,7 @@ class Checkout {
                 return nil
             }
             delegate.handleCheckoutResult(transaction)
-            await transaction.finish()
+            print("unfinied transaction ")
             return transaction
         default:
             delegate.handleCheckoutError("Invalid transaction")
