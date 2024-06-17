@@ -31,7 +31,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
         webView = WKWebView(frame: .zero, configuration: webViewConfiguration)
         webView.navigationDelegate = self
         webView.uiDelegate = self
-        //webView.isInspectable = true
+        webView.isInspectable = true
         let contentController = webView.configuration.userContentController
         contentController.add(self, name: "toggleMessageHandler")
         view = webView
@@ -41,8 +41,8 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let url = URL(string: "http://localhost:8080/apps/colors.html")!
-        //let url = URL(string: "http://localhost:3000/apps/colors")!
+        //let url = URL(string: "http://localhost:8080/apps/colors.html")!
+        let url = URL(string: "http://localhost:3000/apps/colors")!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
     }
@@ -161,20 +161,16 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate, WKSc
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if navigationAction.navigationType == .linkActivated  {
-            if let url = navigationAction.request.url, let host = url.host {
+            if let url = navigationAction.request.url {
                 let path = url.path
-                print(url)
-                print(host)
-                print(path)
-                if path == "/services/checkout", UIApplication.shared.canOpenURL(url) {
-                    //UIApplication.shared.open(url)
-                    /*let alertController = UIAlertController(title: nil, message: "Hello!", preferredStyle: .actionSheet)
-                    self.present(alertController, animated: true, completion: nil)*/
-                    /*if let productId = url.query {
-                        checkout(productId)
+                if path == "/external/payment" {
+                    let bsafesHost = "https://v2.bsafes.com"
+                    let externalURL = URL(string: "\(bsafesHost)/logIn?toPath=/services/payment")
+                    guard (externalURL != nil) else {
+                        return
                     }
-                    decisionHandler(.cancel)*/
-                    decisionHandler(.allow)
+                    UIApplication.shared.open(externalURL!)
+                    decisionHandler(.cancel)
                     return
                 } else {
                     decisionHandler(.allow)
